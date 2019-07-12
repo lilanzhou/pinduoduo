@@ -1,0 +1,34 @@
+
+
+spring:
+  datasource:
+    name: ryanblog
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/pinduoduo?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT
+      username: root
+      password: root
+  freemarker:
+    request-context-attribute: req  #req????request
+    suffix: .ftl
+    content-type: text/html
+    enabled: true
+    cache: false  #????????
+    template-loader-path: classpath:/templates/   #??????��?? ????????
+    charset: UTF-8   #??????
+    settings:
+      number_format: '0.##'
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.ryan.entity
+  configLocation: classpath:mybatis/mybatis-config.xml
+server:
+  port: 8081
+
+
+
+
+
+
